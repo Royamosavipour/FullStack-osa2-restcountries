@@ -1,11 +1,15 @@
 
 import { useState, useEffect } from "react";
 import axios from "axios";
-const api_key = import.meta.env.VITE_SOME_KEY;
+
+
+
+
 function Country({ data: { name, capital, population, flags, languages } }) {
   const [weather, setWeather] = useState({});
   useEffect(() => {
     if (capital) {
+      const api_key = import.meta.env.VITE_SOME_KEY;
       axios
         .get(`https://api.openweathermap.org/data/2.5/weather?q=${capital}&appid=${api_key}&units=metric`)
         .then((response) => {
