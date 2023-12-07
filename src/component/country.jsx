@@ -1,13 +1,9 @@
 
 import { useState, useEffect } from "react";
-
 import axios from "axios";
-
 const api_key = import.meta.env.VITE_SOME_KEY;
-
 function Country({ data: { name, capital, population, flags, languages } }) {
   const [weather, setWeather] = useState({});
-
   useEffect(() => {
     if (capital) {
       axios
@@ -21,6 +17,7 @@ function Country({ data: { name, capital, population, flags, languages } }) {
     // Cleanup function
     return () => setWeather({});
   }, [capital]);
+
   return (
     <>
       <h1>{name["common"]}</h1>
@@ -50,7 +47,6 @@ function Country({ data: { name, capital, population, flags, languages } }) {
       )}
     </>
   );
-
 }
 
 export default Country;
