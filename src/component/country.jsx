@@ -7,8 +7,8 @@ const api_key = import.meta.env.VITE_SOME_KEY;
 
 function Country({ data: { name, capital, population, flags, languages } }) {
   const [weather, setWeather] = useState({});
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+
+
 
   useEffect(() => {
     if (capital) {
