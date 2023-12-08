@@ -1,9 +1,9 @@
 
 import { useState, useEffect } from "react";
 import axios from "axios";
+// import.meta.env.VITE_SOME_KEY
 
-
-const api_key = import.meta.env.VITE_SOME_KEY;
+const api_key ="547eea2051cbb08e14fa499fb58c79d5" ;
 
 function Country({ data: { name, capital, population, flags, languages } }) {
   const [weather, setWeather] = useState({});
