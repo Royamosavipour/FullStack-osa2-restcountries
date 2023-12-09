@@ -23,6 +23,7 @@ function Country({ data: { name, capital, population, flags, languages } }) {
     // Cleanup function
     return () => setWeather({});
   }, [capital]);
+  // test
 
   return (
     <>
